@@ -6,10 +6,12 @@ import Footer from "./components/Footer";
 import Home from "./pages/Home";
 
 function App() {
+  const [show, setShow] = useState(false);
+
   return (
     <Router>
       <div className="font-manrope">
-        <Navbar />
+        <Navbar show={show} setShow={setShow} />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/:page" element={<PageRender />} />

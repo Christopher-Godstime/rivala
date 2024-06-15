@@ -1,50 +1,15 @@
 import React, { useState } from "react";
 import { IoCheckmark } from "react-icons/io5";
-import { FiChevronDown } from "react-icons/fi";
+import p1 from "../assets/p1.png";
+import p2 from "../assets/p2.png";
 import pink from "../assets/pink.png";
+import Faqs from "../components/Faqs";
 
 const Pricing = () => {
-  const [clickedIndex, setClickedIndex] = useState({});
-
-  const handleClick = (index) => () => {
-    setClickedIndex((state) => ({
-      ...state,
-      [index]: !state[index],
-    }));
-  };
-
-  const Dropdown = [
-    {
-      title: "How can my company become a partner with Rivala?",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
-    },
-    {
-      title: "What benefits do partners gain from collaborating with Rivala?",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    },
-    {
-      title: "What type of companies does Rivala partner with?",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    },
-    {
-      title: "Can partners choose talents based on specific criteria?",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    },
-    {
-      title: "How does Rivala manage payroll, local compliance for partners?",
-      content:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. ",
-    },
-  ];
-
   return (
-    <div className="px-[3%] lg:px-[5%] xl:px-[7%]  xl:py-[100px] py-[40px]">
+    <div className="px-[3%] lg:px-[5%] xl:px-[7%]  xl:py-[100px] py-[80px]">
       <div className="max-w-[1480px] mx-auto">
-        <h4 className="text-[60px] font-[700] leading-[72px] text-[#101828] text-center lg:w-[768px] mx-auto">
+        <h4 className="lg:text-[60px] text-[36px] font-[600] md:font-[700] leading-[44px] lg:leading-[72px] text-[#101828] text-center lg:w-[768px] mx-auto tracking-tight">
           Pricing plans that grow with your business
         </h4>
         <h4 className="text-[20px] font-[400] leaading-[30px] text-[#667085] mt-[24px] text-center font-ibm">
@@ -61,7 +26,7 @@ const Pricing = () => {
             </button>
           </div>
 
-          <div className="grid grid-cols-1 xl:grid-cols-3 gap-[24px] font-ibm md:w-[400px] xl:w-full 2xl:w-[1240px] mx-auto mt-[50px]">
+          <div className="grid grid-cols-1 xl:grid-cols-3 gap-[24px] font-ibm md:w-[400px] xl:w-full  mx-auto mt-[50px]">
             <div className="bg-[#F9FAFB] rounded-[24px] p-[24px]">
               <h4 className="text-[20px] font-[600] text-text leading-[30px]">
                 Starter
@@ -217,43 +182,27 @@ const Pricing = () => {
           </div>
         </div>
 
-        <div className="mt-[100px]">
-          <h4 className="text-[48px] font-[700] leading-[60px] text-center ">
-            Frequently Asked Questions
-          </h4>
-          <div className=" mt-[24px] xl:w-[846px] mx-auto">
-            {Dropdown.map((drop, i) => (
-              <div key={i} className="border-b-[1px] border-[#E6E7E8]">
-                <div
-                  onClick={handleClick(i)}
-                  className="py-[16px] flex justify-between items-center "
-                >
-                  <h4 className="text-[16px] lg:text-[24px] cursor-pointer font-[600]">
-                    {drop.title}
-                  </h4>
-                  <div
-                    onClick={handleClick(i)}
-                    className={`text-sm duration-300 cursor-pointer ${
-                      clickedIndex[i] ? "rotate-180" : "rotate-0"
-                    } `}
-                  >
-                    <FiChevronDown className="text-[28px]" />
-                  </div>
-                </div>
-                {clickedIndex[i] ? (
-                  <h4 className="text-[14px] lg:text-[16px] py-[20px] px-[38px] font-light -mt-[20px] mb-[28px]">
-                    {drop.content}
-                  </h4>
-                ) : null}
-              </div>
-            ))}
-          </div>
-        </div>
+        <Faqs />
 
-        <div className=" lg:flex lg:space-x-[30px] mt-[140px]">
-          <div className="2xl:w-[40%] lg:w-[50%] rounded-[24px] px-[24px] py-[50px] bg-[#DBF5FF] h-[664px]">
+        <div className=" lg:flex lg:space-x-[30px] ">
+          <div className="2xl:w-[35%] lg:w-[50%] rounded-[24px] px-[24px] pt-[50px] bg-[#FAFAFA] lg:h-[687px] flex flex-col">
             <h4 className="text-[36px] font-[700] text-text leading-[44px]">
-              Employee cost calculator
+              Seamlessly Scale Your Tech Team With Vetted Talents 
+            </h4>
+            <h4 className="text-[18px] font-[500] leading-[28px] text-[#56575C] mt-[16px]">
+              Grow your tech team conveniently with vetted talents that align
+              with your organizational culture and values.
+            </h4>
+            <button className="text-white hover:bg-gray-800 px-[20px] py-[12px] rounded-[8px] w-[91px] flex justify-center bg-[#04040A] text-[14px] font-[500] mt-[24px]">
+              Try now
+            </button>
+            <div className="mt-auto w-full pt-[20px]">
+              <img className="mx-auto" src={p1} />
+            </div>
+          </div>
+          <div className="2xl:w-[65%] lg:w-[50%] rounded-[24px] px-[24px] pt-[50px] bg-[#FAFAFA] lg:h-[687px] mt-[30px] lg:mt-[0px] flex flex-col">
+            <h4 className="text-[36px] font-[700] text-text leading-[44px]">
+              Cut Down On Hiring Time
             </h4>
             <h4 className="text-[18px] font-[500] leading-[28px] text-[#56575C] mt-[16px]">
               Get a curated list of qualified candidates within 72 hours and
@@ -262,19 +211,8 @@ const Pricing = () => {
             <button className="text-white hover:bg-gray-800 px-[20px] py-[12px] rounded-[8px] w-[91px] flex justify-center bg-[#04040A] text-[14px] font-[500] mt-[24px]">
               Try now
             </button>
-          </div>
-          <div className="2xl:w-[60%] lg:w-[50%] rounded-[24px] px-[24px] py-[50px] bg-[#EFDCF5] h-[664px] mt-[30px] lg:mt-[0px] flex flex-col">
-            <h4 className="text-[36px] font-[700] text-text leading-[44px]">
-              Talk to sales
-            </h4>
-            <h4 className="text-[18px] font-[500] leading-[28px] text-[#56575C] mt-[16px]">
-              Discover how we can help your business
-            </h4>
-            <button className="text-white hover:bg-gray-800 px-[20px] py-[12px] rounded-[8px] w-[91px] flex justify-center bg-[#04040A] text-[14px] font-[500] mt-[24px]">
-              Try now
-            </button>
-            <div className="mt-auto w-full ">
-              <img className="xl:w-1/2 mx-auto" src={pink} />
+            <div className="mt-auto w-full pt-[20px]">
+              <img className="mx-auto" src={p2} />
             </div>
           </div>
         </div>

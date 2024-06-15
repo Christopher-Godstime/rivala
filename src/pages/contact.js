@@ -7,7 +7,7 @@ import logo4 from "../assets/logo4.png";
 
 const Contact = () => {
   return (
-    <div className="px-[3%] lg:px-[5%] xl:px-[7%]  xl:py-[100px] py-[40px]">
+    <div className="px-[3%] lg:px-[5%] xl:px-[7%]  xl:py-[100px] py-[80px]">
       <div className="max-w-[1480px] mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-[30px] lg:gap-[10%] 3xl:gap-[15%]">
           <div className="border-[#F2F2F2] border-[1px] rounded-[20px] p-[24px]">
